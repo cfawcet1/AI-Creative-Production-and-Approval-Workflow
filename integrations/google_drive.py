@@ -87,15 +87,16 @@ def download_file(file_id, destination):
 
 
 if __name__ == "__main__":
-    MANIFEST_FILE_ID = "1HiauUbwT8fqnOMTL9T8uyJyWCXDhcQuk"
+    LOGO_FILE_ID = "1JQjp8PfBYKiEmbgZbpBK-1fYguZEPqZb"
 
     destination = (
         PROJECT_ROOT
         / "data"
-        / "may_madness_campaign_manifest.json"
+        / "assets"
+        / "may_madness_logo.svg"
     )
 
-    downloaded = download_file(MANIFEST_FILE_ID, destination)
+    downloaded = download_file(LOGO_FILE_ID, destination)
 
-    print("\nUpdated campaign manifest downloaded:")
+    print("\nUpdated campaign logo downloaded:")
     print(downloaded)
