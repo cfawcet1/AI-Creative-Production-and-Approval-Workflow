@@ -1,0 +1,82 @@
+{
+  "brand": "Summit Sports Network",
+  "campaign": "May Madness",
+  "version": "2.0-draft",
+  "status": "pending_svg_master",
+  "description": "Fictional national basketball championship event identity and promotional treatments.",
+  "identity": {
+    "primary_logo": {
+      "filename": "may_madness_logo.svg",
+      "format": "svg",
+      "role": "authoritative_campaign_logo",
+      "status": "approved",
+      "sha256": "6983f15d4155314408ad09d8b72e0bc080ad1db3132c2d32e535f10544c3822e",
+      "note": "Do not substitute JPEG reference for the authoritative vector master."
+    },
+    "approved_assets": {
+      "marquee_heat": {
+        "filename": "marquee_heat.jpeg",
+        "type": "approved_raster_marquee",
+        "title": "Championship Heat",
+        "usage": "Matchups, semifinals, competitive intensity",
+        "format": "jpeg",
+        "dimensions_px": [
+          1376,
+          768
+        ],
+        "sha256": "0daac06737d1835ab972abf7911c4612939a62b5b0f1a2ab921f9d5bfd96a290",
+        "status": "approved"
+      },
+      "marquee_space": {
+        "filename": "marquee_space.jpeg",
+        "type": "approved_raster_marquee",
+        "title": "Championship Galaxy",
+        "usage": "Launch, opening ceremony, major broadcast moments",
+        "format": "jpeg",
+        "dimensions_px": [
+          1376,
+          768
+        ],
+        "sha256": "ac2f0b7b57996eea5dceda03d0aa9489d0242b369fab6289b89c2444ea29f960",
+        "status": "approved"
+      },
+      "may_madness_logo_reference": {
+        "filename": "may_madness_logo.jpeg",
+        "type": "reference_only",
+        "title": "Championship Logo reference",
+        "usage": "Visual reference only; approved SVG master to be supplied",
+        "format": "jpeg",
+        "dimensions_px": [
+          1536,
+          1536
+        ],
+        "sha256": "b81e5a936a65792f2d0c73cfc2c3711ad4144bebefb4751bf7a24305bc40b333",
+        "status": "reference_only"
+      }
+    }
+  },
+  "colors": {
+    "midnight_navy": "#101D35",
+    "electric_orange": "#FF5A1F",
+    "white": "#FFFFFF",
+    "optional_broadcast_blue": "#2389FF"
+  },
+  "production": {
+    "logo_source_policy": "composite approved SVG deterministically; never regenerate or redraw",
+    "marquee_source_policy": "use approved raster artwork unchanged; do not treat as SVG",
+    "avoid_double_branding": "Marquees already contain MAY MADNESS title. Do not overlay the campaign SVG on top of a marquee unless explicitly directed.",
+    "human_approval_required": true,
+    "source_assets_read_only": true,
+    "export_formats": [
+      "png",
+      "webp"
+    ]
+  },
+  "templates": [
+    "may_madness_marquee_16x9"
+  ],
+  "provenance": {
+    "hash_algorithm": "sha256",
+    "note": "Hashes cover uploaded JPEG files only. Recompute and record the SVG hash after its approved master is uploaded."
+  }
+}
