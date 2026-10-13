@@ -16,25 +16,24 @@ This public repository illustrates one specific workflow from that larger archit
 
 The ESPN production implementation used the following technologies:
 
-| Technology | Production Responsibility |
+|Technology|                                     | Production Responsibility |
 
-|---|---|
 
-| **AWS EventBridge** | Event-driven workflow orchestration |
+| **AWS EventBridge** |                          | Event-driven workflow orchestration |
 
-| **Python services** | Custom orchestration, business logic, and integration services |
+| **Python services** |                          | Custom orchestration, business logic, and integration services |
 
-| **Amazon Bedrock** | Generative AI model access and inference |
+| **Amazon Bedrock**  |                          | Generative AI model access and inference |
 
-| **Midjourney** | AI-assisted creative asset generation |
+| **Midjourney**      |.                         | AI-assisted creative asset generation |
 
-| **Amazon S3** | Storage and transfer of generated creative assets |
+| **Amazon S3**       |                          | Storage and transfer of generated creative assets |
 
-| **Enterprise Digital Asset Management (DAM)** | Retrieval and management of authoritative media and brand assets |
+| **Enterprise Digital Asset Management (DAM)**  | Retrieval and management of authoritative media and brand assets |
 
-| **Disney Content Management System** | Editorial review and approval |
+| **Disney Content Management System** |         | Editorial review and approval |
 
-| **Internal media infrastructure APIs** | Integration with broadcast metadata and publishing systems |
+| **Internal media infrastructure APIs** |.      | Integration with broadcast metadata and publishing systems |
 
 The architecture connected generative AI capabilities to existing enterprise systems rather than replacing those systems with an autonomous agent.
 
