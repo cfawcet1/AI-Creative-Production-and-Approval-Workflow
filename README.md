@@ -1,25 +1,82 @@
 # CreativeOps AI
 
-### Governed AI Creative Production | Python Reference Implementation
+### Enterprise Agentic Creative Operations | Production Architecture Reference Demo
 
-CreativeOps AI demonstrates how generative AI can participate in a creative production workflow without becoming the authority over brand assets, compliance, or publication decisions.
+![May Madness promotional graphic](data/generated/may_madness_promo.png)
 
-The system combines AI-generated imagery with deterministic asset validation, controlled composition, and human approval.
+## Project Overview
 
-**Core principle:** AI generates creative material. Deterministic services enforce brand requirements. Humans authorize the result.
+CreativeOps AI is a simplified demonstration of a production agentic AI system I designed and built for ESPN during my tenure at The Walt Disney Company.
 
-## Business Problem
+The original system supported AI-assisted creative asset production and orchestration across ESPN's existing media infrastructure, integrating generative AI with enterprise asset management, editorial workflows, and publishing systems.
 
-Creative production teams need to generate campaign assets quickly while maintaining control over:
+This public repository illustrates one specific workflow from that larger architecture using a fictional sports broadcaster, Summit Sports Network.
 
-- Approved brand identities and creative assets
-- Asset provenance and integrity
-- Campaign-specific production requirements
-- Human review and approval
-- Traceability between an approved artifact and its source materials
+## Original Production Architecture
 
-Generating an image is only one part of that workflow. The larger engineering problem is ensuring the result is governed, reproducible, and reviewable.
+The ESPN production implementation used the following technologies:
 
+| Technology | Production Responsibility |
+
+|---|---|
+
+| **AWS EventBridge** | Event-driven workflow orchestration |
+
+| **Python services** | Custom orchestration, business logic, and integration services |
+
+| **Amazon Bedrock** | Generative AI model access and inference |
+
+| **Midjourney** | AI-assisted creative asset generation |
+
+| **Amazon S3** | Storage and transfer of generated creative assets |
+
+| **Enterprise Digital Asset Management (DAM)** | Retrieval and management of authoritative media and brand assets |
+
+| **Disney Content Management System** | Editorial review and approval |
+
+| **Internal media infrastructure APIs** | Integration with broadcast metadata and publishing systems |
+
+The architecture connected generative AI capabilities to existing enterprise systems rather than replacing those systems with an autonomous agent.
+
+## Capabilities of the Original Production System
+
+The production implementation supported:
+
+- **Event-driven orchestration:** Coordinating creative production workflows through AWS EventBridge and custom Python services.
+
+- **Generative asset production:** Using Amazon Bedrock and Midjourney to generate creative materials.
+
+- **Enterprise asset management:** Retrieving approved brand assets and transferring generated materials between Amazon S3 and the existing DAM.
+
+- **Metadata-driven workflows:** Integrating with ESPN's internal media infrastructure and broadcast metadata services.
+
+- **Editorial approval:** Routing generated assets through Disney's existing content management system for human review.
+
+- **Publishing integration:** Connecting approved creative materials to downstream publishing workflows.
+
+- **Enterprise API integration:** Coordinating services across proprietary internal systems and AWS infrastructure.
+
+## What This Demo Illustrates
+
+This repository implements **one deliberately narrow workflow** from the larger production architecture:
+
+1. Retrieve an approved campaign logo from Google Drive.
+
+2. Generate a creative background using the OpenAI Images API.
+
+3. Verify the approved logo against its campaign manifest and SHA-256 fingerprint.
+
+4. Composite the approved logo over the generated background using deterministic Python services.
+
+5. Present the finished graphic for human approval or rejection.
+
+6. Persist the review decision against the exact artifact version.
+
+The fictional Summit Sports Network and May Madness campaign provide a self-contained example without exposing ESPN's proprietary systems, assets, or internal code.
+
+**This is not a reproduction of ESPN's production infrastructure.** It is a smaller implementation of the same architectural principles, using publicly accessible technologies.
+
+The demo intentionally uses a simple Python workflow rather than recreating the original system's event-driven infrastructure. It focuses on the separation of generative AI, deterministic governance, enterprise asset integration, and human authorization.
 ## Demonstrated Workflow
 
 This repository implements a local reference workflow for a fictional sports broadcaster, Summit Sports Network, and its May Madness campaign.
